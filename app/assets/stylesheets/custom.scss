@@ -81,6 +81,12 @@ p{
 		text-decoration: none;
 	}
 }
+
+.navbar-fixed-top,
+.navbar-fixed-bottom{
+	z-index: 0;
+}
+
 nav {
 	button{
 		margin-top: 10px;
@@ -125,7 +131,7 @@ footer ul{
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: #111; /* Black*/
+    background-color: #222; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -149,7 +155,7 @@ footer ul{
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
     position: absolute;
-    top: 50;
+    top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
@@ -157,8 +163,9 @@ footer ul{
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
-    transition: margin-left .5s;
-    padding: 20px;
+    transition: margin-left 0.2s ease,
+    						padding 0.8s linear;
+    
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
