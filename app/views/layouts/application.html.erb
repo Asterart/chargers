@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Juice Me Up!</title>
+    <%= render 'layouts/default_rails' %>
+    <%= render 'layouts/shim' %>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1" >
+  </head>
+
+  <body id = "temp" onload="geoFindMe()">
+    
+    <%= render 'layouts/header' %>
+
+    <%= render 'chargers/index' %>
+
+    <%= render 'layouts/map' %>
+ 
+
+     
+    <div class = "container"> 
+      <% flash.each do |message_type, message| %>
+        <div class = "alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+
+    </div>
+
+  </body>
+
+</html>
+

@@ -1,0 +1,64 @@
+<header class = "navbar navbar-fixed-top navbar-inverse">
+	<div class = "container">
+		<%= link_to "Juice Me Up", root_path, id: "logo" %>
+		<nav>
+			<ul class = "nav navbar-nav navbar-right">
+				<li><button id = "charger" onclick = "chargersType()">Show chargers</li>
+				<li><button onclick = "showSC()">Buy</li>
+				<li><button id = "Buy">Buy</li>
+				<li><button id = "Buy">Buy</li>
+			</ul>
+		</nav>
+	</div>
+
+</header>
+
+
+<script>
+var click = 1;
+
+	function chargersType(){
+		var pos;
+		var elem = document.getElementById("chargerbox");
+		var buttonTitle = document.getElementById("charger");
+		var map_index = document.getElementById("mapid");
+		var id = setInterval(frame, 5);
+
+		if(click == 1){ 
+			pos = 0;
+			map_index.style.zIndex = "-1";
+		} else {
+			pos = 160; 
+		}
+		function frame() {
+			if(click == 1){	
+				if(pos == 160){
+					clearInterval(id);
+					click = 0;
+					buttonTitle.innerHTML = "Hide chargers";
+				} else {
+					pos++;
+					elem.style.top = pos + "px";
+				}
+			} else {
+				if(pos == 0){
+					clearInterval(id);
+					click = 1;			
+					buttonTitle.innerHTML = "Show chargers";
+					map_index.style.zIndex = "1";
+				} else {
+					pos--;
+					elem.style.top = pos + "px";
+				}
+			}
+		}
+		
+	}	
+
+	function showSC(){
+		L.marker([53, 22]).addTo(mymap)
+        .bindPopup('This is my new location')
+        .openPopup();
+	}
+
+</script>

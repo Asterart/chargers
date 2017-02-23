@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Tesla
+  lat: 1.5
+  long: 1.5
+  num_of_chargers: 1
+
+two:
+  name: Type2
+  lat: 15.5
+  long: 1.5
+  num_of_chargers: 1

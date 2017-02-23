@@ -1,0 +1,3 @@
+class ChargersController < ApplicationController
+	
+end
