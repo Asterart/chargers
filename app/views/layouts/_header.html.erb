@@ -1,10 +1,10 @@
-<header class = "navbar navbar-fixed-top navbar-inverse headerMenu">
+<header class = "navbar navbar-fixed-top navbar-inverse ">
 	<div class = "container">
-		<%= link_to "Juice Me Up", root_path, id: "logo" %>
+		<span id = "logo">Juice Me Up</span>
 		<nav>
 			<ul class = "nav navbar-nav navbar-right">
-				<li><button id = "charger" onclick = "openNav()">Show chargers</li>
-				<li><button onclick = "showSC()">Buy</li>
+				<li><button id = "charger">Show chargers</li>
+				<li><button >Buy</li>
 				<li><button id = "Buy">Buy</li>
 				<li><button id = "Buy">Buy</li>
 			</ul>
@@ -13,30 +13,3 @@
 
 </header>
 
-
-<script>
-
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("mapid").style.marginLeft = "250px";
-    document.getElementById("headerMenu").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-}
-
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("mapid").style.marginLeft = "0";
-    document.getElementById("headerMenu").style.marginLeft = "0";
-    document.body.style.backgroundColor = "white";
-}
-
-
-	function showSC(){
-		L.marker([53, 22]).addTo(mymap)
-        .bindPopup('This is my new location')
-        .openPopup();
-	}
-
-</script>
